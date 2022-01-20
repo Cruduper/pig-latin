@@ -13,19 +13,22 @@ function isVowel(char)  {
 }
 
 function pigLatin(text)  {
-
   let prefix = "";
   let suffix = "";
 
   if  ( isVowel(text.charAt(0)) ) {
-    suffix = "way";
+    return text + "way";
   }
   else  {
-    for ( currentChar = text.charAt(0); isVowel(0)
-    
+    for ( currentChar = 0; !isVowel(text.charAt(currentChar)) || (currentChar != (text.length -1)) ; currentChar++ )
+    {
+      prefix = text.slice(currentChar+1);
+      suffix += text.charAt(currentChar);
+    }
+    suffix += "ay";
+    return prefix + suffix;
   }
 
-  return text + suffix;
 }
 
 
