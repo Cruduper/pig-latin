@@ -28,6 +28,23 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 ## Tests
 
 ### Describe: pigLatin();
+Test: "with input that is a single vowel character, add 'way' to end"
+Code:
+const char = "a";
+pigLatin(char);
+Expected Output: "away"
+
+Test: "with input that is a single consonant character, add 'ay' to the end"
+Code:
+const char = "b"
+pigLatin(char);
+Expected Output: "bay"
+
+Test: "with input that is uppercase, the previous tests still work"
+Code:
+const char = "B"
+pigLatin(B);
+Expected Output: "Bay"
 
 Test: "with input words that start with a vowel, add 'way' to end"
 Code:
